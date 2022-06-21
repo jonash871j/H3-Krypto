@@ -53,7 +53,7 @@ namespace Hashing
             }
 
             Stopwatch stopwatch = Stopwatch.StartNew();
-            var hashBytes = hMAC.ComputeHash(Encoding.UTF8.GetBytes(text));
+            byte[] hashBytes = hMAC.ComputeHash(Encoding.UTF8.GetBytes(text));
             stopwatch.Stop();
 
             HashResultView(text, stopwatch, hashBytes);
@@ -77,7 +77,7 @@ namespace Hashing
             }
 
             Stopwatch stopwatch = Stopwatch.StartNew();
-            var hashBytes = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(text));
+            byte[] hashBytes = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(text));
             stopwatch.Stop();
 
             HashResultView(text, stopwatch, hashBytes);

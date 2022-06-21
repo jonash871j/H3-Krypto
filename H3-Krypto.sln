@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Encrypter", "Encrypter\Encr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hashing", "Hashing\Hashing.csproj", "{367B228F-97A0-46AF-A040-CE294CD42B6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurePasswords", "SecurePasswords\SecurePasswords.csproj", "{768DF79D-66F1-420E-A48B-5C8DF17F5B67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{367B228F-97A0-46AF-A040-CE294CD42B6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{367B228F-97A0-46AF-A040-CE294CD42B6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{367B228F-97A0-46AF-A040-CE294CD42B6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{768DF79D-66F1-420E-A48B-5C8DF17F5B67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{768DF79D-66F1-420E-A48B-5C8DF17F5B67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{768DF79D-66F1-420E-A48B-5C8DF17F5B67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{768DF79D-66F1-420E-A48B-5C8DF17F5B67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
