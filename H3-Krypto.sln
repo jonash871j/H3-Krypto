@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Randomness", "Randomness\Randomness.csproj", "{4F2C9809-9343-4647-8ACE-8F9CCB8239B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encrypter", "Encrypter\Encrypter.csproj", "{BACD04F3-5E02-4336-AB2F-0A80FC862F18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F2C9809-9343-4647-8ACE-8F9CCB8239B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F2C9809-9343-4647-8ACE-8F9CCB8239B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F2C9809-9343-4647-8ACE-8F9CCB8239B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F2C9809-9343-4647-8ACE-8F9CCB8239B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BACD04F3-5E02-4336-AB2F-0A80FC862F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BACD04F3-5E02-4336-AB2F-0A80FC862F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BACD04F3-5E02-4336-AB2F-0A80FC862F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BACD04F3-5E02-4336-AB2F-0A80FC862F18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {672CFE4D-C78D-4E49-9ADB-7F7901D25120}
+	EndGlobalSection
+EndGlobal
