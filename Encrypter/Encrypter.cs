@@ -17,11 +17,7 @@
                 }
 
                 int index = upperText[i] - 65;
-                if (index < 0 || index >= alphabetEncryptionTable.Length)
-                {
-                    encryptedText += '?';
-                }
-                else
+                if (index >= 0 && index < alphabetEncryptionTable.Length)
                 {
                     encryptedText += alphabetEncryptionTable[index];
                 }
