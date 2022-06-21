@@ -2,10 +2,7 @@
 {
     internal static class Encrypter
     {
-        static char[] alphabetEncryptionTable = new char[26]
-        {
-            'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'
-        };
+        static readonly char[] alphabetEncryptionTable = "KLMNOPQTSTUVWXYZABCDEFGHIJ".ToCharArray();
 
         public static string Encrypt(string text)
         {
@@ -19,7 +16,7 @@
                     continue;
                 }
 
-                    int index = upperText[i] - 65;
+                int index = upperText[i] - 65;
                 if (index < 0 || index >= alphabetEncryptionTable.Length)
                 {
                     encryptedText += '?';
