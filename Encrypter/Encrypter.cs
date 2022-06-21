@@ -2,7 +2,7 @@
 {
     internal static class Encrypter
     {
-        static readonly char[] alphabetEncryptionTable = "KLMNOPQTSTUVWXYZABCDEFGHIJ".ToCharArray();
+        static readonly char[] alphabetEncryptionTable = "KLMNOPQRSTUVWXYZABCDEFGHIJ".ToCharArray();
 
         public static string Encrypt(string text)
         {
