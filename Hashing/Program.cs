@@ -89,7 +89,8 @@ namespace Hashing
             Console.WriteLine("Text to hash: " + text);
             Console.WriteLine("Time to compute: " + stopwatch.Elapsed);
             Console.WriteLine("Hash in hex: 0x" + Convert.ToHexString(hashBytes));
-            Console.WriteLine("Hash in ASCII: " + Encoding.ASCII.GetString(hashBytes));
+            Console.WriteLine("Hash in BASE64: " + Convert.ToBase64String(hashBytes));
+           ;
         }
     }
 }
