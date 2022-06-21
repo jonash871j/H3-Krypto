@@ -12,7 +12,7 @@
             {
                 if (upperText[i] == ' ')
                 {
-                    encryptedText += " ";
+                    encryptedText += ' ';
                     continue;
                 }
 
