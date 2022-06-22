@@ -5,39 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SymmetricEncryptionWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="473">
+        Loaded="Window_Loaded"
+        Title="MainWindow" Height="545" Width="473" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="140*"></ColumnDefinition>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="315*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="0" Margin="16, 16">
+        <Grid Grid.Column="0" Margin="16,16,16,16" Grid.ColumnSpan="2">
             <StackPanel>
-                <ComboBox>
-                    <ComboBoxItem>DES</ComboBoxItem>
-                </ComboBox>
-                <Button Margin="0, 16">Generate Key and IV</Button>
-                <Button Margin="0, 16">Encrypt</Button>
-                <Button Margin="0, 16">Decrypt</Button>
+                <Button x:Name="BN_GenerateKeyAndIV" Click="BN_GenerateKeyAndIV_Click" Margin="0, 8">Generate key and IV</Button>
+                <Button x:Name="BN_Encrypt" Click="BN_Encrypt_Click" Margin="0, 8">Encrypt</Button>
+                <Button x:Name="BN_Decrypt" Click="BN_Decrypt_Click" Margin="0, 8">Decrypt</Button>
             </StackPanel>
         </Grid>
 
-        <Grid Grid.Column="1" Margin="16, 16">
-            <StackPanel>
-                <Label>Key</Label>
-                <TextBox></TextBox>
-                <Label>IV</Label>
-                <TextBox></TextBox>
-                <Label>ACHII</Label>
-                <TextBox></TextBox>
-                <Label>HEX</Label>
-                <TextBox IsReadOnly="True"></TextBox>
-                <Label>ACHII</Label>
-                <TextBox IsReadOnly="True"></TextBox>
-                <Label>HEX</Label>
-                <TextBox IsReadOnly="True"></TextBox>
-            </StackPanel>
-        </Grid>
+        <Grid Grid.Column="2" Margin="16,16,16,16">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.25*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="32"></RowDefinition>
+            </Grid.RowDefinitions>
+            <GroupBox Grid.Row="0" Header="Encryption options">
+                <StackPanel>
+                    <Label>Algorithm</Label>
+                    <ComboBox x:Name="CoB_Algorithm" SelectedIndex="0" SelectionChanged="CoB_Algorithm_SelectionChanged">
+                        <ComboBoxItem>DES</ComboBoxItem>
+                        <ComboBoxItem>TripleDES</ComboBoxItem>
+                        <ComboBoxItem>RC2</ComboBoxItem>
+                        <ComboBoxItem>Rijndael</ComboBoxItem>
+                        <ComboBoxItem>AES</ComboBoxItem>
+                    </ComboBox>
+                    <Label>Key</Label>
+                    <TextBox x:Name="TB_Key"></TextBox>
+                    <Label>IV</Label>
+                    <TextBox x:Name="TB_IV"></TextBox>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Grid.Row="1" Header="Plain text">
+                <StackPanel>
+                    <Label>ASCII/Base64</Label>
+                    <StackPanel Orientation="Horizontal"></StackPanel>
+                    <TextBox x:Name="TB_PlainTextASCIIOrBase64" TextChanged="TB_PlainTextASCII_TextChanged"></TextBox>
+                    <Label>Hex</Label>
+                    <TextBox x:Name="TB_PlainTextHex" IsReadOnly="True">0x</TextBox>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Grid.Row="2" Header="Result">
+                <StackPanel>
+                    <Label>ASCII/Base64</Label>
+                    <TextBox x:Name="TB_ChipherTextASCIIOrBase64" IsReadOnly="True"></TextBox>
+                    <Label>Hex</Label>
+                    <TextBox x:Name="TB_ChipherTextHex" IsReadOnly="True">0x</TextBox>
+                </StackPanel>
+            </GroupBox>
+            <Label Grid.Row="3" x:Name="LB_Time">Time: </Label>
+         </Grid>
     </Grid>
 </Window>

@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace SymmetricEncryption.Encryption
+namespace SymmetricEncryptionWPF
 {
     internal class Encrypter
     {
@@ -19,7 +19,7 @@ namespace SymmetricEncryption.Encryption
         public static string Decrypt(SymmetricAlgorithm symmetricAlgorithm, byte[] bytes)
         {
             byte[] buffer = new byte[bytes.Length];
-            MemoryStream ms = new();
+            MemoryStream ms = new(bytes);
             CryptoStream cs = new(ms, symmetricAlgorithm.CreateDecryptor(), CryptoStreamMode.Read);
             cs.Read(buffer);
             cs.Close();
