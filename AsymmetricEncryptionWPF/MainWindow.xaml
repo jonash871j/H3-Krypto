@@ -73,7 +73,7 @@
                             <TextBox IsReadOnly="True" x:Name="TB_PrivateModulus"></TextBox>
                         </StackPanel>
                     </GroupBox>
-                    <GroupBox Grid.Row="1" Header="Public Data">
+                    <GroupBox Grid.Row="1" Header="Private Data">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"></ColumnDefinition>
