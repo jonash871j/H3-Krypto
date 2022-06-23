@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecurePasswords", "SecurePa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SymmetricEncryptionWPF", "SymmetricEncryptionWPF\SymmetricEncryptionWPF.csproj", "{DB84C807-AD7F-402B-936E-91175608F790}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsymmetricEncryptionWPF", "AsymmetricEncryptionWPF\AsymmetricEncryptionWPF.csproj", "{F46EE269-3A2D-4A4C-B33F-2B976671A16E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DB84C807-AD7F-402B-936E-91175608F790}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB84C807-AD7F-402B-936E-91175608F790}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB84C807-AD7F-402B-936E-91175608F790}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F46EE269-3A2D-4A4C-B33F-2B976671A16E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F46EE269-3A2D-4A4C-B33F-2B976671A16E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F46EE269-3A2D-4A4C-B33F-2B976671A16E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F46EE269-3A2D-4A4C-B33F-2B976671A16E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,123 @@
+﻿<Window x:Class="AsymmetricEncryptionWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AsymmetricEncryptionWPF"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="MainWindow" Height="608" Width="648">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu>
+            <MenuItem Header="File">
+                <MenuItem x:Name="MI_Exit" Header="Exit" Click="MI_Exit_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Options">
+                <MenuItem x:Name="MI_GenerateNewKeys" Header="Generate new keys" Click="MI_GenerateNewKeys_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <GroupBox Grid.Column="0" Header="Encryption">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="2*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <GroupBox Grid.Row="0" Header="Public Data">
+                        <StackPanel Margin="8, 8">
+                            <Label>Exponent</Label>
+                            <TextBox IsReadOnly="True" x:Name="TB_PublicExponent"></TextBox>
+                            <Label>Modulus</Label>
+                            <TextBox IsReadOnly="True" x:Name="TB_PublicModulus"></TextBox>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Grid.Row="1" Header="Encrypt">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="20"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Margin="8, 8">
+                                <Label>Plaintext</Label>
+                                <TextBox x:Name="TB_PublicPlainText"></TextBox>
+                                <Label>Chipher Bytes</Label>
+                                <TextBox IsReadOnly="True" x:Name="TB_PublicChipherBytes"></TextBox>
+                            </StackPanel>
+                            <Button Grid.Row="1" x:Name="BN_Encrypt" Click="BN_Encrypt_Click">Encrypt</Button>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </GroupBox>
+
+            <GroupBox Grid.Column="1" Header="Decryption">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <GroupBox Grid.Row="0" Header="Public Data">
+                        <StackPanel Margin="8, 8">
+                            <Label>Exponent</Label>
+                            <TextBox IsReadOnly="True" x:Name="TB_PrivateExponent"></TextBox>
+                            <Label>Modulus</Label>
+                            <TextBox IsReadOnly="True" x:Name="TB_PrivateModulus"></TextBox>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Grid.Row="1" Header="Public Data">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0" Margin="8, 8">
+                                <Label>D</Label>
+                                <TextBox IsReadOnly="True" x:Name="TB_PrivateD"></TextBox>
+                                <Label>DP</Label>
+                                <TextBox IsReadOnly="True" x:Name="TB_PrivateDP"></TextBox>
+                                <Label>DQ</Label>
+                                <TextBox IsReadOnly="True" x:Name="TB_PrivateDQ"></TextBox>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="1" Margin="8, 8">
+                                <Label>Inverse Q</Label>
+                                <TextBox IsReadOnly="True" x:Name="TB_PrivateInverseQ"></TextBox>
+                                <Label>P</Label>
+                                <TextBox IsReadOnly="True" x:Name="TB_PrivateP"></TextBox>
+                                <Label>Q</Label>
+                                <TextBox IsReadOnly="True" x:Name="TB_PrivateQ"></TextBox>
+                            </StackPanel>
+                        </Grid>
+
+                    </GroupBox>
+                    <GroupBox Grid.Row="2" Header="Decrypt">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="20"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Margin="8, 8">
+                                <Label>Chipher Bytes</Label>
+                                <TextBox x:Name="TB_PrivateChipherBytes"></TextBox>
+                                <Label>Plaintext</Label>
+                                <TextBox IsReadOnly="True" x:Name="TB_PrivatePlainText"></TextBox>
+                            </StackPanel>
+                            <Button Grid.Row="1" x:Name="BN_Decrypt" Click="BN_Decrypt_Click">Decrypt</Button>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </GroupBox>
+        </Grid>
+    </Grid>
+
+</Window>
